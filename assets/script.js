@@ -2,6 +2,15 @@ var table = document.getElementById('planner');
 var cells = table.getElementsByTagName('td');
 
 console.log(cells)
+
+for (var i = 0; i < cells.length; i++) {
+    cells[i].onClick = function(){
+        var input = document.createElement('input');
+        input.setAttribute('type', 'text');
+        input.value = this.innerHTML;
+        input.style.backgroundColor = "LightGoldenRodYellow"
+    }
+}
 // $(function () {
 //     $("td").dblclick(function () {
 //         var OriginalContent = $(this).text();
